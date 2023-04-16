@@ -2,6 +2,8 @@
 var generateBtn = document.querySelector("#generate");
 var passwordLength;
 var checkCasing;
+var determineNumeric;
+var determineSpecialCharacters;
 // Write password to the #password input
 function checkLength() {
   passwordLength =  prompt("Welcome to the Password Generator how long would you like your password to be?")
@@ -32,10 +34,41 @@ checkCasing = false
   }else{
     alert("Please answer yes or no")
     determineCasing()
+  else{}  
   }
   return checkCasing
 }
+function determineNumeric(){
+  checkNumeric =  prompt("Do you want your password to contain any numbers yes or no?")
+   if(checkNumeric === "yes"){
+    checkNumeric = true
+   } else if(checkNumeric === "no"){
+ checkNumeric= false
+   } else if(""){
+    alert("Please answer yes or no")
+    determineNumeric()
+   }else{
+     alert("Please answer yes or no")
+     determineNumeric()
+   }
+   return determineNumeric
+ }
 
+ function determineSpecialCharacters(){
+  determineSpecialCharacters =  prompt("Do you want your password to contain any special characters yes or no?")
+   if(determineSpecialCharacters === "yes"){
+    determineSpecialCharacters = true
+   } else if(determineSpecialCharacters === "no"){
+ determineSpecialCharacters = false
+   } else if(""){
+    alert("Please answer yes or no")
+    determineSpecialCharacters()
+   }else{
+     alert("Please answer yes or no")
+     determineSpecialCharacters()
+   }
+   return determineSpecialCharacters
+ }
 
 function writePassword() {
 checkLength()
